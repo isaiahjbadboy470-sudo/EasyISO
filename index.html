@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyISO - Advanced ISO Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>EasyISO</h1>
+        <p>The easiest way to manage your ISO files with advanced features</p>
+    </header>
+
+    <main>
+        <!-- Windows 11 notice -->
+        <section class="notice">
+            <p><strong>Note:</strong> This program is best used on Windows 11. If you're on a different OS, changing boot files is recommended.</p>
+        </section>
+
+        <!-- Download section -->
+        <section class="download">
+            <h2>Download EasyISO</h2>
+            <p>Click the link below to download the latest EasyISO installer:</p>
+            <a href="https://drive.google.com/file/d/1vwypi9EcOhEz0HU3DpKpTUbj96DGvM6Q/view?usp=sharing" target="_blank" class="download-button">Download EasyISO</a>
+        </section>
+
+        <!-- Drag & Drop feature -->
+        <section class="drag-drop">
+            <h2>Drag & Drop your .ISO Folder</h2>
+            <p>Make sure your folder contains an exact <code>.iso</code> file. Drag it below and let EasyISO handle the rest!</p>
+            <div id="drop-zone">
+                <p>Drag your .ISO folder here</p>
+            </div>
+            <p class="warning">⚠️ Experimental: Functionality may vary depending on your system memory and folder structure.</p>
+        </section>
+
+        <!-- Docs section -->
+        <section class="docs">
+            <h2>Documentation</h2>
+            <p>Here you can find information on how to use EasyISO:</p>
+            <ul>
+                <li>Ensure your folder has exactly one .iso file.</li>
+                <li>Drag the folder into the drop zone.</li>
+                <li>EasyISO will automatically process the files.</li>
+                <li>If something doesn't work, check your system memory and folder structure.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 EasyISO. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Placeholder for drag-and-drop functionality
+        const dropZone = document.getElementById('drop-zone');
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if(files.length > 0) {
+                alert(`You dropped ${files.length} file(s). EasyISO processing placeholder.`);
+                // Here you would add the actual file processing logic
+            }
+        });
+    </script>
+</body>
+</html>

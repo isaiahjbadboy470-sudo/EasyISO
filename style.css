@@ -1,0 +1,98 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.notice {
+    background-color: #fde68a;
+    padding: 1rem;
+    border-left: 5px solid #f59e0b;
+    margin-bottom: 2rem;
+}
+
+.download {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #3b82f6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #2563eb;
+}
+
+.drag-drop {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#drop-zone {
+    border: 2px dashed #9ca3af;
+    padding: 3rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+#drop-zone.dragover {
+    border-color: #3b82f6;
+}
+
+.warning {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+.docs {
+    background-color: #e5e7eb;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #1f2937;
+    color: #fff;
+}
